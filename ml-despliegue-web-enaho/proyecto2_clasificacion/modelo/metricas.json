@@ -1,0 +1,180 @@
+{
+  "modelo_seleccionado": "Gradient Boosting",
+  "criterio": "mayor ROC-AUC en validacion cruzada (3 folds) sobre el 80% de entrenamiento",
+  "umbral_optimo": 0.29,
+  "metricas_finales_prueba": {
+    "ROC_AUC": 0.9006535206365535,
+    "PR_AUC": 0.7236243733237678,
+    "Accuracy": 0.8375,
+    "Precision": 0.5773809523809523,
+    "Recall": 0.7220843672456576,
+    "F1": 0.6416758544652701
+  },
+  "matriz_confusion": [
+    [
+      1384,
+      213
+    ],
+    [
+      112,
+      291
+    ]
+  ],
+  "resultados": {
+    "Regresion logistica (base)": {
+      "cv_ROC_AUC": 0.8895285630357611,
+      "test_ROC_AUC": 0.8943847878543982,
+      "test_PR_AUC": 0.7133181577666798,
+      "test_Accuracy": 0.793,
+      "test_Precision": 0.4917043740573152,
+      "test_Recall": 0.8089330024813896,
+      "test_F1": 0.6116322701688556,
+      "train_ROC_AUC": 0.8917238411757609,
+      "mejores_parametros": {
+        "C": 0.5
+      },
+      "segundos": 1.1
+    },
+    "Random Forest": {
+      "cv_ROC_AUC": 0.876570781920731,
+      "test_ROC_AUC": 0.8942900071629342,
+      "test_PR_AUC": 0.6951612927457878,
+      "test_Accuracy": 0.803,
+      "test_Precision": 0.5073649754500819,
+      "test_Recall": 0.7692307692307693,
+      "test_F1": 0.611439842209073,
+      "train_ROC_AUC": 0.9238829919461135,
+      "mejores_parametros": {
+        "n_estimators": 200,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "max_depth": 14
+      },
+      "segundos": 19.1
+    },
+    "Gradient Boosting": {
+      "cv_ROC_AUC": 0.8921829660078163,
+      "test_ROC_AUC": 0.9006535206365535,
+      "test_PR_AUC": 0.7236243733237678,
+      "test_Accuracy": 0.8585,
+      "test_Precision": 0.7112676056338029,
+      "test_Recall": 0.5012406947890818,
+      "test_F1": 0.5880640465793304,
+      "train_ROC_AUC": 0.9033412762730714,
+      "mejores_parametros": {
+        "subsample": 0.85,
+        "n_estimators": 200,
+        "min_samples_leaf": 20,
+        "max_depth": 2,
+        "learning_rate": 0.1
+      },
+      "segundos": 25.1
+    }
+  },
+  "importancia": [
+    {
+      "variable": "menores_14",
+      "importancia": 0.046540524183837334,
+      "sd": 0.0031279806826384274
+    },
+    {
+      "variable": "nivel_educativo_jefe",
+      "importancia": 0.03773961258003933,
+      "sd": 0.006063054938205975
+    },
+    {
+      "variable": "ocupacion_jefe",
+      "importancia": 0.03381864413890198,
+      "sd": 0.0032579080887288874
+    },
+    {
+      "variable": "perceptores_ingreso",
+      "importancia": 0.02108870385073766,
+      "sd": 0.002189540483289422
+    },
+    {
+      "variable": "area",
+      "importancia": 0.020986639806958265,
+      "sd": 0.0020773614489580355
+    },
+    {
+      "variable": "tamanio_hogar",
+      "importancia": 0.016702377752330425,
+      "sd": 0.002344507984388873
+    },
+    {
+      "variable": "internet",
+      "importancia": 0.011376013648419725,
+      "sd": 0.0016532691335637683
+    },
+    {
+      "variable": "material_piso",
+      "importancia": 0.01131240570486547,
+      "sd": 0.0013124636440225049
+    },
+    {
+      "variable": "region_natural",
+      "importancia": 0.006852372081026695,
+      "sd": 0.0012818604581850328
+    },
+    {
+      "variable": "agua_red_publica",
+      "importancia": 0.0052600370421588966,
+      "sd": 0.00116698117851696
+    },
+    {
+      "variable": "edad_jefe",
+      "importancia": 0.0031776780595131476,
+      "sd": 0.001111159873708469
+    },
+    {
+      "variable": "tenencia_vivienda",
+      "importancia": 0.001265458186954227,
+      "sd": 0.0003234049156093593
+    },
+    {
+      "variable": "habitaciones",
+      "importancia": 0.0007915547296343667,
+      "sd": 0.000804092739092433
+    },
+    {
+      "variable": "electricidad",
+      "importancia": 0.0007273641178948964,
+      "sd": 0.0012712678476837424
+    },
+    {
+      "variable": "sexo_jefe",
+      "importancia": -5.865526397969001e-05,
+      "sd": 5.371092514963363e-05
+    }
+  ],
+  "referencia": {
+    "edad_jefe": 48,
+    "tamanio_hogar": 4,
+    "menores_14": 1,
+    "perceptores_ingreso": 1,
+    "habitaciones": 3,
+    "area": "Urbana",
+    "region_natural": "Sierra",
+    "sexo_jefe": "Hombre",
+    "nivel_educativo_jefe": "Secundaria",
+    "ocupacion_jefe": "Empleo informal",
+    "agua_red_publica": "Si",
+    "electricidad": "Si",
+    "internet": "No",
+    "material_piso": "Cemento",
+    "tenencia_vivienda": "Propia"
+  },
+  "prevalencia": 0.2016,
+  "n_entrenamiento": 8000,
+  "n_prueba": 2000,
+  "semilla": 42,
+  "sklearn_version": "1.8.0",
+  "casos_verificacion_esperados": [
+    0.0038,
+    0.9814,
+    0.1798,
+    0.9958,
+    0.0493
+  ]
+}

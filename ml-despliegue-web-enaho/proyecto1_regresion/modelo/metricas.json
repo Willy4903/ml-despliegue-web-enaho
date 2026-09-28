@@ -1,0 +1,139 @@
+{
+  "modelo_seleccionado": "Gradient Boosting",
+  "criterio": "menor RMSE en validacion cruzada (3 folds) sobre el 80% de entrenamiento",
+  "resultados": {
+    "Ridge (base)": {
+      "cv_RMSE": 801.4669566296262,
+      "test_MAE": 462.97392012687806,
+      "test_RMSE": 820.1655160859245,
+      "test_R2": 0.7909308959446091,
+      "train_R2": 0.7888359916194061,
+      "mejores_parametros": {
+        "alpha": 0.1
+      },
+      "segundos": 0.7
+    },
+    "Random Forest": {
+      "cv_RMSE": 862.3742390807453,
+      "test_MAE": 484.7416356953376,
+      "test_RMSE": 861.7843185408742,
+      "test_R2": 0.7691743741834614,
+      "train_R2": 0.8883888888597027,
+      "mejores_parametros": {
+        "n_estimators": 120,
+        "min_samples_leaf": 3,
+        "max_features": 0.5,
+        "max_depth": 16
+      },
+      "segundos": 15.2
+    },
+    "Gradient Boosting": {
+      "cv_RMSE": 767.587777639154,
+      "test_MAE": 447.2629665248052,
+      "test_RMSE": 786.7483070868713,
+      "test_R2": 0.8076206373965783,
+      "train_R2": 0.8241776901007394,
+      "mejores_parametros": {
+        "subsample": 0.85,
+        "n_estimators": 250,
+        "min_samples_leaf": 10,
+        "max_depth": 2,
+        "learning_rate": 0.1
+      },
+      "segundos": 25.8
+    }
+  },
+  "importancia": [
+    {
+      "variable": "anios_estudio",
+      "importancia": 774.1633899178714,
+      "sd": 16.96052772093697
+    },
+    {
+      "variable": "area",
+      "importancia": 317.346699989576,
+      "sd": 19.740637278547023
+    },
+    {
+      "variable": "tamanio_empresa",
+      "importancia": 209.7789800189245,
+      "sd": 10.880350594501962
+    },
+    {
+      "variable": "categoria_ocupacional",
+      "importancia": 136.41038565255053,
+      "sd": 8.775612049740705
+    },
+    {
+      "variable": "sector",
+      "importancia": 125.88201128627877,
+      "sd": 6.46427739803759
+    },
+    {
+      "variable": "aporta_pension",
+      "importancia": 115.09767894306802,
+      "sd": 10.214370702879556
+    },
+    {
+      "variable": "region_natural",
+      "importancia": 114.89966178081193,
+      "sd": 16.372907787294086
+    },
+    {
+      "variable": "horas_semana",
+      "importancia": 82.25830213321488,
+      "sd": 9.703256113241423
+    },
+    {
+      "variable": "nivel_educativo",
+      "importancia": 57.4885851532008,
+      "sd": 6.401315221477589
+    },
+    {
+      "variable": "edad",
+      "importancia": 45.43289635182451,
+      "sd": 6.529613103243553
+    },
+    {
+      "variable": "experiencia_anios",
+      "importancia": 21.81073516372072,
+      "sd": 2.977868798317906
+    },
+    {
+      "variable": "sexo",
+      "importancia": 8.339617651092784,
+      "sd": 6.941258231335411
+    },
+    {
+      "variable": "miembros_hogar",
+      "importancia": 1.0856135305830663,
+      "sd": 0.7009719339382191
+    }
+  ],
+  "referencia": {
+    "edad": 39,
+    "anios_estudio": 11,
+    "experiencia_anios": 22,
+    "horas_semana": 43,
+    "miembros_hogar": 4,
+    "sexo": "Hombre",
+    "area": "Urbana",
+    "region_natural": "Sierra",
+    "nivel_educativo": "Secundaria",
+    "categoria_ocupacional": "Trabajador independiente",
+    "sector": "Servicios",
+    "tamanio_empresa": "1 a 10 trabajadores",
+    "aporta_pension": "No"
+  },
+  "n_entrenamiento": 6400,
+  "n_prueba": 1600,
+  "semilla": 42,
+  "sklearn_version": "1.8.0",
+  "casos_verificacion_esperados": [
+    6522.45,
+    250.97,
+    2036.16,
+    9726.74,
+    2890.55
+  ]
+}

@@ -1,0 +1,34 @@
+{
+ "area=Rural": {
+  "hogares": 561,
+  "pobres_reales": 270,
+  "recall": 0.852,
+  "precision": 0.62,
+  "tasa_real": 0.481,
+  "tasa_predicha": 0.661
+ },
+ "area=Urbana": {
+  "hogares": 1439,
+  "pobres_reales": 133,
+  "recall": 0.459,
+  "precision": 0.459,
+  "tasa_real": 0.092,
+  "tasa_predicha": 0.092
+ },
+ "sexo_jefe=Hombre": {
+  "hogares": 1430,
+  "pobres_reales": 288,
+  "recall": 0.726,
+  "precision": 0.577,
+  "tasa_real": 0.201,
+  "tasa_predicha": 0.253
+ },
+ "sexo_jefe=Mujer": {
+  "hogares": 570,
+  "pobres_reales": 115,
+  "recall": 0.713,
+  "precision": 0.577,
+  "tasa_real": 0.202,
+  "tasa_predicha": 0.249
+ }
+}
